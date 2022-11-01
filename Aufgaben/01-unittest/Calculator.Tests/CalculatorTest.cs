@@ -51,6 +51,20 @@ namespace Calculator.Tests
 
             // Then
             Assert.Equal(expected, actual);
+        }        [Fact]
+        public void DivideTenByTwo()
+        {
+            // Given
+            int a = 10;
+            int b = 2;
+            int expected = 5;
+            Calculator calculator = new Calculator();
+
+            // When
+            int actual = calculator.Divide(a, b);
+
+            // Then
+            Assert.Equal(expected, actual);
         }
     }
 }
