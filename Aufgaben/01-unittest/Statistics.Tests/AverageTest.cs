@@ -29,5 +29,15 @@ namespace Statistics.Tests
 
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void TestMeanOfNoNumbers()
+        {
+            List<int> numbers = new List<int>();
+
+            Average average = new Average();
+
+            Assert.Throws<ArgumentException>(() => average.Mean(numbers));
+        }
     }
 }
