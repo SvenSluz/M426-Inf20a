@@ -10,7 +10,7 @@ public class MedianTest
     public void TestMedianForOddNumberOfElements()
     {
         //given
-        var numbers = new List<double> {1, 2, 3, 4, 5, 6, 7};
+        var numbers = new List<double> {5, 3, 2, 4, 1, 7, 6};
         var expected = 4.0;
         var median = new Median();
         //when
@@ -23,7 +23,7 @@ public class MedianTest
     public void TestMedianForEvenNumberOfElements()
     {
         //given
-        var numbers = new List<double> {1, 2, 4, 5, 6, 7};
+        var numbers = new List<double> {4, 5, 1, 5, 6, 2};
         var expected = 4.5;
         var median = new Median();
         //when
