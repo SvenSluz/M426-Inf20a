@@ -36,7 +36,7 @@ namespace Calculator.Tests
             // Then
             Assert.Equal(expected, actual);
         }
-        
+
         [Fact]
         public void MultiplyThreeByFive()
         {
@@ -51,7 +51,9 @@ namespace Calculator.Tests
 
             // Then
             Assert.Equal(expected, actual);
-        }        [Fact]
+        }
+
+        [Fact]
         public void DivideTenByTwo()
         {
             // Given
@@ -65,6 +67,21 @@ namespace Calculator.Tests
 
             // Then
             Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void DivideTenByZero()
+        {
+            // Given
+            int a = 10;
+            int b = 0;
+            Calculator calculator = new Calculator();
+
+            // When
+            Assert.Throws<DivideByZeroException>(() => calculator.Divide(a, b));
+
+
+            // Then
         }
     }
 }
