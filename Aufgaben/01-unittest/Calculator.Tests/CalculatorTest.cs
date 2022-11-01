@@ -24,15 +24,30 @@ namespace Calculator.Tests
         [Fact]
         public void TestSubtractFourFromSixIsTwo()
         {
-            //1.4 Vermuten: Test wird failen
             // Given
-            int a = 10;
+            int a = 6;
             int b = 4;
             int expected = 2;
             Calculator calculator = new Calculator();
 
             // When
             int actual = calculator.Subtract(a, b);
+
+            // Then
+            Assert.Equal(expected, actual);
+        }
+        
+        [Fact]
+        public void MultiplyThreeByFive()
+        {
+            // Given
+            int a = 3;
+            int b = 5;
+            int expected = 15;
+            Calculator calculator = new Calculator();
+
+            // When
+            int actual = calculator.Multiply(a, b);
 
             // Then
             Assert.Equal(expected, actual);
