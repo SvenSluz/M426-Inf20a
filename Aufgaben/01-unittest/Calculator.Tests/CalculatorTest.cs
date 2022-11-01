@@ -24,8 +24,9 @@ namespace Calculator.Tests
         [Fact]
         public void TestSubtractFourFromSixIsTwo()
         {
+            //1.4 Vermuten: Test wird failen
             // Given
-            int a = 6;
+            int a = 10;
             int b = 4;
             int expected = 2;
             Calculator calculator = new Calculator();
