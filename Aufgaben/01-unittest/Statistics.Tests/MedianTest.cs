@@ -10,8 +10,8 @@ public class MedianTest
     public void TestMedianForOddNumberOfElements()
     {
         //given
-        var numbers = new List<double> {1, 2, 3, 4, 5};
-        var expected = 3.0;
+        var numbers = new List<double> {1, 2, 3, 4, 5, 6, 7};
+        var expected = 4.0;
         var median = new Median();
         //when
         var actual = median.CalculateMedian(numbers);
@@ -23,8 +23,8 @@ public class MedianTest
     public void TestMedianForEvenNumberOfElements()
     {
         //given
-        var numbers = new List<double> {1, 2, 4, 5};
-        var expected = 3.0;
+        var numbers = new List<double> {1, 2, 4, 5, 6, 7};
+        var expected = 4.5;
         var median = new Median();
         //when
         var actual = median.CalculateMedian(numbers);
@@ -40,6 +40,6 @@ public class MedianTest
         var median = new Median();
         //when
         //then
-        Assert.Throws<ArgumentException>(()=>median.CalculateMedian(numbers));
+        Assert.Throws<ArgumentException>(() => median.CalculateMedian(numbers));
     }
 }
