@@ -25,7 +25,8 @@ namespace Calculator
             {
                 throw new ArgumentException();
             }
-            return dividend/divisor;
+
+            return dividend / divisor;
         }
     }
 }
